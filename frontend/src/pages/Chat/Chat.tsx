@@ -3,6 +3,8 @@ import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import { useSocket } from "../../context/SocketContext";
 import { useMyName } from "../../context/MyNameContext";
+import ReturnIcon from "../../components/ReturnIcon";
+import SendIcon from "../../components/SendIcon";
 
 interface IMessage {
 	txt: string;
@@ -28,7 +30,7 @@ export default function Chat() {
 	useEffect(() => {
 		// Listen for incoming messages from the server
 		socket?.on('QUIT_CHAT', (name) => {
-			// For simplicity not using the id
+			// For simplicity not using the id to check if they are the same
 			if (name === myName) { 
 				navigate('/');
 			}
@@ -86,9 +88,7 @@ export default function Chat() {
 							</div>
 							<div style={{display: "flex", alignItems: "center"}}>
 								<i className="return-icon" onClick={handleReturn}>
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36" height="36"  style={{opacity:1}}>
-										<g fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4"><path d="M12.9998 8L6 14L12.9998 21"/><path d="M6 14H28.9938C35.8768 14 41.7221 19.6204 41.9904 26.5C42.2739 33.7696 36.2671 40 28.9938 40H11.9984"/></g>
-									</svg>
+									<ReturnIcon />
 								</i>	
 							</div>
 						</div>
@@ -96,7 +96,6 @@ export default function Chat() {
 
             		{/* Card Body */}
 					<div className="card-body msg_card_body">
-
 						{
 							messages.map((msg, id) => {
 								return (
@@ -106,8 +105,7 @@ export default function Chat() {
 									</div>
 								</div>);
 							})
-						}
-					
+						}		
 					</div>
 					{/* Card Footer */}
 					<div className="card-footer">
@@ -123,10 +121,8 @@ export default function Chat() {
 							</textarea>
 							<div className="input-group-append">
 								<span data-testid="send-msg-div" className="input-group-text send_btn" onClick={sendMessage}>
-									<i >
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="www.w3.org">
-										<path d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" />
-										</svg>
+									<i>
+										<SendIcon />
 									</i>
 								</span>
 							</div>
