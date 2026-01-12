@@ -1,6 +1,6 @@
 # My Solution
 
-<kbd>![alt text](https://https://github.com/mckenzie-mm/code-challenge/blob/main/screenshots/app-photo.png)<kbd>
+<kbd>![alt text](https://github.com/mckenzie-mm/code-challenge/blob/main/screenshots/app-photo.png)<kbd>
 
 This repo contains my solution to the CloudWatch challenge.
 
