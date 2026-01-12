@@ -1,3 +1,37 @@
+# My Solution
+
+<kbd>![alt text](https://https://github.com/mckenzie-mm/code-challenge/blob/main/screenshots/app-photo.png)<kbd>
+
+This repo contains my solution to the CloudWatch challenge.
+
+I have tested the logic manually.
+
+When a user connects, he/she are assigned a randomly generated name and color and stored in a dynamic state on the server.
+
+Time did not permit the logic to be implemented for saving the state, when the application closes.
+
+The home page contains a list of all other users. When a user disconnects, they are removed from the list.
+
+To communicate with another user, click on a user in the list, and the chat page is opened for both.
+
+Clicking on the return icon, will close the chat for both users.
+
+When there are multiple users, the chat window will only open for the two users that are messaging. 
+
+The styling is based on a template I found online, which used Bootstrap. Therefore I replaced the Antd with Bootstrap.
+
+The original template is at: 
+
+https://bootsnipp.com/snippets/nNg98
+
+I use Context for preserving the state between pages, but State management, such as Redux is an alternative.
+
+Basic unit tests were written for verifying the DOM and user interactions. Time did not permit more extensive tests. I had trouble installing and using "jest-dom" (which was using a require import) and so I used "happy-dom" instead.
+
+The pages can be refactored into separate components (but time did not permit this).
+
+
+
 # CloudWave Full Stack Code Challenge ~ Wave Chat
 CloudWave have provided scaffolding for both the front and back end of the challenge, to save you time.
 
