@@ -18,9 +18,7 @@ Clicking on the return icon, will close the chat for both users.
 
 When there are multiple users, the chat window will only open for the two users that are messaging. 
 
-The styling is based on a template I found online, which used Bootstrap. Therefore I replaced the Antd with Bootstrap.
-
-The original template is at: 
+The styling is based on a template I found online, which used Bootstrap. Therefore I replaced the Antd with Bootstrap. The original template is at: 
 
 https://bootsnipp.com/snippets/nNg98
 
