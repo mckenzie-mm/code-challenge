@@ -2,7 +2,7 @@
 
 <kbd>![alt text](https://github.com/mckenzie-mm/code-challenge/blob/main/screenshots/app-photo.png)<kbd>
 
-This repo contains my solution to the CloudWatch challenge.
+This repo contains my solution to the CloudWave challenge.
 
 I have tested the logic manually.
 
