@@ -11,7 +11,7 @@ export interface IItem {
   backgroundColor: string;
 }
 
-const ListContext = createContext<IValue | undefined>(undefined);
+export const ListContext = createContext<IValue | undefined>(undefined);
 
 export const useList = () => {
   const context = useContext(ListContext);

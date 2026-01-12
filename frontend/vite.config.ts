@@ -9,5 +9,10 @@ export default defineConfig({
     checker({
       typescript: true
     })
-  ]
+  ],
+ test: {
+    environment: 'happy-dom',
+    setupFiles: ['./src/tests/setup.ts'],
+    include: ['src/**/*.{test,spec}.{ts,tsx}']
+  }
 });

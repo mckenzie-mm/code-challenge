@@ -76,7 +76,7 @@ export default function Chat() {
 									<div className="rounded-circle chat_user_img chat_user_txt" 
 										style={{ backgroundColor: "#666"}}
 									>
-										{name[0]}
+										{name && name[0]}
 									</div>
 								</div>
 								<div className="user_info">
@@ -113,16 +113,16 @@ export default function Chat() {
 					<div className="card-footer">
 						<div className="input-group">
 							<textarea 
+								data-testid="msg-input"
 								name="" 
 								className="form-control type_msg" 
 								placeholder="Type your message..."
 								value={input}
 								onChange={(e) => setInput(e.target.value)}
 							>
-									
 							</textarea>
 							<div className="input-group-append">
-								<span className="input-group-text send_btn" onClick={sendMessage}>
+								<span data-testid="send-msg-div" className="input-group-text send_btn" onClick={sendMessage}>
 									<i >
 										<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="www.w3.org">
 										<path d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" />

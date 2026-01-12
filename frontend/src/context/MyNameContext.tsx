@@ -5,7 +5,7 @@ interface IValue {
   resetMyName: (item: string) => void
 }
 
-const MyNameContext = createContext<IValue | undefined>(undefined);
+export const MyNameContext = createContext<IValue | undefined>(undefined);
 
 export const useMyName = () => {
   const context = useContext(MyNameContext);
